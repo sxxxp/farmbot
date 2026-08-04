@@ -1,0 +1,16 @@
+{
+  "당근": {
+    "grow_time": 300,
+    "buy_price": 50,
+    "sell_price": 120,
+    "buy_grade": 1,
+    "description": "흔하게 자라는 당근입니다."
+  },
+  "토마토": {
+    "grow_time": 600,
+    "buy_price": 100,
+    "sell_price": 200,
+    "buy_grade": 1,
+    "description": "달콤한 토마토입니다."
+  }
+}
