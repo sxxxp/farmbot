@@ -13,4 +13,5 @@ def embed_crop_info(crop_name: str) -> discord.Embed:
     embed.add_field(name="구매 가격", value=f"{crop_data['buy_price']}원", inline=True)
     embed.add_field(name="판매 가격", value=f"{crop_data['sell_price']}원", inline=True)
     embed.add_field(name="구매 등급", value=f"{crop_data['buy_grade']}", inline=True)
+    embed.add_field(name="작물 종류", value=f"{crop_data['crop_type']}", inline=True)
     return embed

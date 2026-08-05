@@ -1,18 +1,17 @@
-import discord
+from discord import Interaction, Interaction, app_commands
 from discord.ext import commands
 
-from utils.crop import num_of_crops
+from consistances import NUM_OF_CROPS
 
 
 class Codex(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="도감", description="작물 도감을 확인합니다.")
-    async def codex(self, ctx: commands.Context):
-
-        await ctx.send(
-            f"{ctx.author.mention}님의 도감 현황 입니다. {0}/{num_of_crops()} 🌱"
+    @app_commands.command(name="도감", description="작물 도감을 확인합니다.")
+    async def codex(self, interaction: Interaction):
+        await interaction.response.send_message(
+            f"{interaction.user.mention}님의 도감 현황 입니다. {0}/{NUM_OF_CROPS} 🌱"
         )
 
 

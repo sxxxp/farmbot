@@ -27,6 +27,9 @@ class FarmBot(commands.Bot):
                     print("=" * 40)
                     traceback.print_exc()
                     print("=" * 40)
+        print("Cogs 로드가 완료되었습니다.")
+        await self.tree.sync(guild=discord.Object(id=1116522262426824756))
+        print("명령어 동기화가 완료되었습니다.")
 
     async def on_ready(self):
         print(f"--- 로그인 완료 ---")

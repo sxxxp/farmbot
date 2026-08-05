@@ -1,5 +1,6 @@
-import discord
+from discord import app_commands, Interaction
 from discord.ext import commands
+from consistances import get_crop_choice
 from utils.embed import embed_crop_info
 
 
@@ -7,15 +8,18 @@ class Farming(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="농사")
-    async def farm_status(self, ctx: commands.Context):
-        await ctx.send(f"{ctx.author.mention}님의 밭 상태입니다! 🌾")
+    @app_commands.command(name="농사")
+    async def farm_status(self, interaction: Interaction):
+        await interaction.response.send_message(
+            f"{interaction.user.mention}님의 밭 상태입니다! 🌾"
+        )
 
-    @commands.command(name="작물")
-    async def crop_info(self, ctx: commands.Context, crop_name: str):
+    @app_commands.command(name="작물")
+    async def crop_info(self, interaction: Interaction, crop_name: get_crop_choice):
         embed = embed_crop_info(crop_name)
-        await ctx.send(
-            f"{ctx.author.mention}님, {crop_name}에 대한 정보입니다! 🌱", embed=embed
+        await interaction.response.send_message(
+            f"{interaction.user.mention}님, {crop_name}에 대한 정보입니다! 🌱",
+            embed=embed,
         )
 
 
