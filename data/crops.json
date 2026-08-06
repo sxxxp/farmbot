@@ -14,5 +14,13 @@
     "buy_grade": 1,
     "crop_type": "fruiting vegatable",
     "description": "달콤한 토마토입니다."
+  },
+  "오이": {
+    "grow_time": 300,
+    "buy_price": 80,
+    "sell_price": 150,
+    "buy_grade": 1,
+    "crop_type": "vegatable",
+    "description": "시원한 오이입니다."
   }
 }

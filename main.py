@@ -15,7 +15,7 @@ class FarmBot(commands.Bot):
 
     async def setup_hook(self):
         print("Cogs 로드를 시작합니다...")
-
+        flag = True
         for filename in os.listdir("./cogs"):
             if filename.endswith(".py") and not filename.startswith("_"):
                 extension_name = f"cogs.{filename[:-3]}"
@@ -23,11 +23,12 @@ class FarmBot(commands.Bot):
                     await self.load_extension(extension_name)
                     print(f"✅ 로드 성공: {extension_name}")
                 except Exception as e:
+                    flag = False
                     print(f"❌ 로드 실패: {extension_name} - 오류: {e}")
                     print("=" * 40)
                     traceback.print_exc()
                     print("=" * 40)
-        print("Cogs 로드가 완료되었습니다.")
+        print(f"Cogs 로드가 {'완료되었습니다.' if flag else '실패했습니다.'}")
         await self.tree.sync(guild=discord.Object(id=1116522262426824756))
         print("명령어 동기화가 완료되었습니다.")
 
