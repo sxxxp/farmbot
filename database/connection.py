@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 import asyncpg
 import config
 from typing import Union
@@ -56,22 +58,21 @@ class Database:
                 );
             """)
 
+    @asynccontextmanager
+    async def connection(self):
+        async with self.pool.acquire() as conn:
+            yield conn
+
+    @asynccontextmanager
+    async def transaction(self):
+        async with self.pool.acquire() as conn:
+            async with conn.transaction():
+                yield conn
+
 
 db = Database()
 
 
-DB_TYPE = Union[asyncpg.Pool, asyncpg.Connection]
-
-
 class BaseRepository:
-    def __init__(self, db: DB_TYPE):
-        self.db = db
-
-    async def execute(self, query: str, *args):
-        return await self.db.execute(query, *args)
-
-    async def fetch(self, query: str, *args):
-        return await self.db.fetch(query, *args)
-
-    async def fetchrow(self, query: str, *args):
-        return await self.db.fetchrow(query, *args)
+    def __init__(self, conn: asyncpg.Connection):
+        self.conn = conn

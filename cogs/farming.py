@@ -1,7 +1,7 @@
 from discord import app_commands, Interaction
 from discord.ext import commands
 from consistances import CROP_CHOICES
-from utils.embed import embed_crop_info
+from ui.embed import embed_crop_info
 
 
 class Farming(commands.Cog):

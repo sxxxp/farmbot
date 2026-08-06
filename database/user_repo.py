@@ -1,21 +1,25 @@
-from database.connection import BaseRepository, db
-from utils.user import calculate_level
+from database.connection import BaseRepository
+from service.user import UserService
+from utils.datatype import UserData
 
 
 class UserRepository(BaseRepository):
+
     async def create_user(self, user_id: int):
         """사용자 생성"""
-        await self.db.execute(
+        user: UserData = await self.conn.execute(
             """
             INSERT INTO users (user_id) VALUES ($1)
-            ON CONFLICT (user_id) DO NOTHING;
+            ON CONFLICT (user_id) DO NOTHING
+            RETURNING *;
             """,
             user_id,
         )
+        return user
 
     async def get_user(self, user_id: int):
         """사용자 정보 조회"""
-        row = await self.db.fetchrow(
+        row = await self.conn.fetchrow(
             """
             SELECT * FROM users WHERE user_id = $1;
             """,
@@ -25,7 +29,7 @@ class UserRepository(BaseRepository):
 
     async def update_user_gold(self, user_id: int, gold: int):
         """사용자 골드 업데이트"""
-        await self.db.execute(
+        await self.conn.execute(
             """
             UPDATE users SET gold = gold + $1 WHERE user_id = $2;
             """,
@@ -35,21 +39,21 @@ class UserRepository(BaseRepository):
 
     async def get_user_level(self, user_id: int):
         """사용자 레벨 조회"""
-        row = await self.db.fetchrow(
+        row = await self.conn.fetchrow(
             """
             SELECT farm_exp FROM users WHERE user_id = $1;
             """,
             user_id,
         )
         return (
-            calculate_level(row["farm_exp"])
+            UserService.calculate_level(row["farm_exp"])
             if row and row["farm_exp"] is not None
             else 1
         )
 
     async def update_user_exp(self, user_id: int, exp: int):
         """사용자 경험치 업데이트"""
-        await self.db.execute(
+        await self.conn.execute(
             """
             UPDATE users SET farm_exp = farm_exp + $1 WHERE user_id = $2;
             """,

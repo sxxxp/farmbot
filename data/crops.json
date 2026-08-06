@@ -4,6 +4,7 @@
     "buy_price": 50,
     "sell_price": 120,
     "buy_grade": 1,
+    "exp": 10,
     "crop_type": "vegatable",
     "description": "흔하게 자라는 당근입니다."
   },
@@ -12,6 +13,7 @@
     "buy_price": 100,
     "sell_price": 200,
     "buy_grade": 1,
+    "exp": 25,
     "crop_type": "fruiting vegatable",
     "description": "달콤한 토마토입니다."
   },
@@ -20,6 +22,7 @@
     "buy_price": 80,
     "sell_price": 150,
     "buy_grade": 1,
+    "exp": 35,
     "crop_type": "vegatable",
     "description": "시원한 오이입니다."
   }

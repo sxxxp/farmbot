@@ -1,6 +1,8 @@
 import os
 import asyncio
 import traceback
+import asyncpg
+from database.connection import db
 import discord
 from discord.ext import commands
 import config
@@ -14,6 +16,8 @@ class FarmBot(commands.Bot):
         super().__init__(command_prefix="!", intents=intents, help_command=None)
 
     async def setup_hook(self):
+        print("데이터베이스 연결을 시작합니다...")
+        db.connect()
         print("Cogs 로드를 시작합니다...")
         flag = True
         for filename in os.listdir("./cogs"):
@@ -31,6 +35,12 @@ class FarmBot(commands.Bot):
         print(f"Cogs 로드가 {'완료되었습니다.' if flag else '실패했습니다.'}")
         await self.tree.sync(guild=discord.Object(id=1116522262426824756))
         print("명령어 동기화가 완료되었습니다.")
+
+    async def close(self):
+        print("데이터베이스 연결이 종료되었습니다.")
+        db.close()
+        print("봇이 종료됩니다.")
+        await super().close()
 
     async def on_ready(self):
         print(f"--- 로그인 완료 ---")

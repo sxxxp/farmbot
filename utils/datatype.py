@@ -7,4 +7,12 @@ class CropData(TypedDict):
     sell_price: int
     buy_grade: int
     crop_type: str
+    exp: int
     description: str
+
+
+class UserData(TypedDict):
+    user_id: int
+    farm_exp: int
+    level: int
+    gold: int
