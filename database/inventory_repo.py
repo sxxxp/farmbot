@@ -20,10 +20,11 @@ class InventoryRepository(BaseRepository):
         await self.conn.execute(
             """
             INSERT INTO inventory (user_id, item_id, amount) 
-            VALUES ($1, $2, $3)
+            VALUES ($1, $2, GREATEST($3,0))
             ON CONFLICT (user_id, item_id) DO UPDATE 
             SET amount = inventory.amount + $3
             WHERE inventory.amount + $3 >= 0;
+            
         """,
             user_id,
             item_id,

@@ -10,8 +10,8 @@ def load_crops_data() -> dict[str, CropData]:
 
 def get_crop_choice():
     return [
-        app_commands.Choice(name=crop_id, value=crop_info["description"])
-        for crop_id, crop_info in CROPS_DATA.items()
+        app_commands.Choice(name=crop_id, value=crop_id)
+        for crop_id in CROPS_DATA.keys()
     ]
 
 

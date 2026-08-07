@@ -16,3 +16,10 @@ class UserData(TypedDict):
     farm_exp: int
     level: int
     gold: int
+
+
+class FarmData(TypedDict):
+    slot_id: int
+    crop_id: int | None
+    planted_at: int | None
+    is_watered: bool | None

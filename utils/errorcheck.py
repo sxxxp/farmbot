@@ -1,25 +1,45 @@
 import discord
 from discord import app_commands
-from database.connection import db
 from service.user import UserService
+from exceptions import UserNotAdmin, UserNotRegistered
 
 
-class UserNotRegistered(app_commands.AppCommandError):
-    """유저가 DB에 없을 때 발생시킬 커스텀 예외"""
+def _is_registered(msg: str):
+    async def predicate(interaction: discord.Interaction) -> bool:
+        user = await UserService().is_user_exist(interaction.user.id)
 
-    def __init__(
-        self,
-        message: str = "가입되지 않은 유저입니다. `/회원가입`을 먼저 진행해 주세요.",
-    ):
-        self.message = message
-        super().__init__(self.message)
+        if not user:
+            raise UserNotRegistered(interaction.user, msg)
+
+        return True
+
+    return app_commands.check(predicate)
 
 
-async def is_registered_user(interaction: discord.Interaction) -> bool:
+def is_registered():
+    return _is_registered(None)
 
-    user = await UserService(db).get_user(interaction.user.id)
 
-    if not user:
-        raise UserNotRegistered()
+def is_target_registered(param_name: str = "user"):
+    async def predicate(interaction: discord.Interaction) -> bool:
+        target_member = getattr(interaction.namespace, param_name, None)
+        if target_member:
+            user = await UserService().is_user_exist(target_member.id)
 
-    return True
+            if not user:
+                raise UserNotRegistered(
+                    interaction.user, "해당 유저의 프로필이 존재하지 않습니다."
+                )
+
+            return True
+
+    return app_commands.check(predicate)
+
+
+def is_owner():
+    async def predicate(interaction: discord.Interaction) -> bool:
+        if await interaction.client.is_owner(interaction.user):
+            return True
+        raise UserNotAdmin
+
+    return app_commands.check(predicate)

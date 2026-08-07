@@ -1,11 +1,12 @@
 import os
 import asyncio
 import traceback
-import asyncpg
 from database.connection import db
 import discord
+
 from discord.ext import commands
 import config
+from utils.errorcheck import UserNotRegistered
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -13,11 +14,16 @@ intents.message_content = True
 
 class FarmBot(commands.Bot):
     def __init__(self):
-        super().__init__(command_prefix="!", intents=intents, help_command=None)
+        super().__init__(
+            command_prefix="!",
+            intents=intents,
+            help_command=None,
+            owner_ids={432066597591449600},
+        )
 
     async def setup_hook(self):
         print("데이터베이스 연결을 시작합니다...")
-        db.connect()
+        await db.connect()
         print("Cogs 로드를 시작합니다...")
         flag = True
         for filename in os.listdir("./cogs"):
@@ -32,13 +38,14 @@ class FarmBot(commands.Bot):
                     print("=" * 40)
                     traceback.print_exc()
                     print("=" * 40)
-        print(f"Cogs 로드가 {'완료되었습니다.' if flag else '실패했습니다.'}")
-        await self.tree.sync(guild=discord.Object(id=1116522262426824756))
-        print("명령어 동기화가 완료되었습니다.")
+        print(f"Cogs 로드가 {'완료되었습니다.' if flag else '실패했습니다. ⚠️'}")
+        self.tree.copy_global_to(guild=discord.Object(id=1116522262426824756))
+        synced = await self.tree.sync(guild=discord.Object(id=1116522262426824756))
+        print(f"{len(synced)}개의 명령어 동기화가 완료되었습니다.")
 
     async def close(self):
         print("데이터베이스 연결이 종료되었습니다.")
-        db.close()
+        await db.close()
         print("봇이 종료됩니다.")
         await super().close()
 
@@ -51,6 +58,23 @@ class FarmBot(commands.Bot):
 
 async def main():
     bot = FarmBot()
+
+    @bot.tree.error
+    async def on_app_comamnd_error(
+        interaction: discord.Interaction, error: discord.app_commands.AppCommandError
+    ):
+        if isinstance(error, UserNotRegistered):
+            msg = error.message if hasattr(error, "message") else str(error)
+            if not interaction.response.is_done():
+                await interaction.response.send_message(msg, ephemeral=True)
+            else:
+                await interaction.followup.send(msg, ephemeral=True)
+            return
+        await interaction.response.send_message(
+            "예기치 못한 에러가 발생했어요.", ephemeral=True
+        )
+        print(f"Unhandled error: {error}")
+
     await bot.start(config.TOKEN)
 
 

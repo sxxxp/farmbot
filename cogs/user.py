@@ -2,6 +2,7 @@ from discord import app_commands, Interaction, Member
 from discord.ext import commands
 from service.user import UserService
 from ui.embed import embed_profile
+from utils.errorcheck import is_target_registered
 
 
 class User(commands.Cog):
@@ -9,6 +10,7 @@ class User(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="프로필")
+    @is_target_registered()
     async def profile(self, interaction: Interaction, user: Member):
         profile = await UserService().get_user(user.id)
         embed = embed_profile(profile)

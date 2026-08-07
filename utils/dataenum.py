@@ -13,11 +13,11 @@ class CropStatus(Enum):
 
 
 class CropType(Enum):
-    VEGETABLE = "vegetable"  # 채소
-    FRUITING_VEGETABLE = "fruiting vegetable"  # 열매를 맺는 채소
-    ROOT = "root"  # 뿌리채소
-    FRUIT = "fruit"  # 과일
-    GRAIN = "grain"  # 곡물
-    LEGUME = "legume"  # 콩류
-    HERB = "herb"  # 허브
-    FLOWER = "flower"  # 꽃
+    채소 = "vegetable"  # 채소
+    과채류 = "fruiting vegetable"  # 열매를 맺는 채소
+    뿌리채소 = "root"  # 뿌리채소
+    과일 = "fruit"  # 과일
+    곡물 = "grain"  # 곡물
+    콩류 = "legume"  # 콩류
+    허브 = "herb"  # 허브
+    꽃 = "flower"  # 꽃

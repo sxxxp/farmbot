@@ -50,13 +50,34 @@ class Database:
                 );
 
                 CREATE TABLE IF NOT EXISTS inventory (
-                    user_id INTEGER,
+                    user_id BIGINT,
                     item_id TEXT,
                     amount INTEGER DEFAULT 0 CHECK (amount >= 0),
                     PRIMARY KEY (user_id, item_id),
                     FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE
                 );
+
+                CREATE OR REPLACE FUNCTION create_initial_user_farm()
+                RETURNS TRIGGER AS $$
+                BEGIN
+                    INSERT INTO user_farms (user_id, slot_id)
+                    VALUES (
+                        NEW.user_id,
+                        1
+                    );
+
+                    RETURN NEW;
+                END;
+                $$ LANGUAGE plpgsql;
+
+                CREATE OR REPLACE TRIGGER trigger_on_user_created
+                    AFTER INSERT ON users
+                    FOR EACH ROW
+                    EXECUTE FUNCTION create_initial_user_farm();
             """)
+
+            return print("DB INIT 성공")
+        print("DB INIT 실패")
 
     @asynccontextmanager
     async def connection(self):

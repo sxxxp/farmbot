@@ -1,6 +1,8 @@
+from typing import List
+
 import discord
 from service.crop import get_crop_data
-from utils.datatype import UserData
+from utils.datatype import UserData, FarmData
 
 
 def embed_crop_info(crop_name: str) -> discord.Embed:
