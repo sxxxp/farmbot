@@ -1,9 +1,20 @@
 {
+  "신기한작물":{
+    "grow_time": 1,
+    "buy_price": 1,
+    "sell_price": 1,
+    "buy_grade": 0,
+    "difficulty": 0,
+    "exp": 1,
+    "crop_type": "신기한작물",
+    "description": "신기한 힘이 깃든 작물입니다."
+  },
   "당근": {
     "grow_time": 150,
     "buy_price": 50,
     "sell_price": 120,
     "buy_grade": 1,
+    "difficulty": 1,
     "exp": 10,
     "crop_type": "뿌리채소",
     "description": "흔하게 자라는 당근입니다."
@@ -12,7 +23,8 @@
     "grow_time": 350,
     "buy_price": 100,
     "sell_price": 200,
-    "buy_grade": 1,
+    "buy_grade": 2,
+    "difficulty": 2,
     "exp": 25,
     "crop_type": "과채류",
     "description": "달콤한 토마토입니다."
@@ -21,9 +33,1040 @@
     "grow_time": 300,
     "buy_price": 80,
     "sell_price": 150,
-    "buy_grade": 1,
+    "buy_grade": 2,
+    "difficulty": 2,
     "exp": 35,
     "crop_type": "채소",
     "description": "시원한 오이입니다."
+  },
+  "딸기": {
+    "grow_time": 600,
+    "buy_price": 200,
+    "sell_price": 380,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 60,
+    "crop_type": "과일",
+    "description": "새콤달콤한 딸기입니다."
+  },
+  "수박": {
+    "grow_time": 1200,
+    "buy_price": 400,
+    "sell_price": 750,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 120,
+    "crop_type": "과채류",
+    "description": "여름을 책임지는 커다란 수박입니다."
+  },
+  "인삼": {
+    "grow_time": 2400,
+    "buy_price": 800,
+    "sell_price": 1500,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 250,
+    "crop_type": "뿌리채소",
+    "description": "오랜 정성으로 키우는 귀한 인삼입니다."
+  },
+  "상추": {
+    "grow_time": 250,
+    "buy_price": 60,
+    "sell_price": 110,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 17,
+    "crop_type": "채소",
+    "description": "쌈 싸 먹기 좋은 부드러운 상추입니다."
+  },
+  "시금치": {
+    "grow_time": 150,
+    "buy_price": 35,
+    "sell_price": 70,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 10,
+    "crop_type": "채소",
+    "description": "영양이 가득한 초록 시금치입니다."
+  },
+  "깻잎": {
+    "grow_time": 240,
+    "buy_price": 55,
+    "sell_price": 100,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 16,
+    "crop_type": "허브",
+    "description": "향긋한 향이 나는 깻잎입니다."
+  },
+  "무": {
+    "grow_time": 250,
+    "buy_price": 60,
+    "sell_price": 115,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 17,
+    "crop_type": "뿌리채소",
+    "description": "시원한 맛의 하얀 무입니다."
+  },
+  "감자": {
+    "grow_time": 230,
+    "buy_price": 55,
+    "sell_price": 105,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 16,
+    "crop_type": "뿌리채소",
+    "description": "어디서나 잘 자라는 포슬포슬한 감자입니다."
+  },
+  "고구마": {
+    "grow_time": 220,
+    "buy_price": 50,
+    "sell_price": 95,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 15,
+    "crop_type": "뿌리채소",
+    "description": "구워 먹으면 달콤한 고구마입니다."
+  },
+  "양파": {
+    "grow_time": 280,
+    "buy_price": 65,
+    "sell_price": 125,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 19,
+    "crop_type": "뿌리채소",
+    "description": "요리의 기본, 알싸한 양파입니다."
+  },
+  "대파": {
+    "grow_time": 230,
+    "buy_price": 55,
+    "sell_price": 105,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 16,
+    "crop_type": "채소",
+    "description": "국물 맛을 살려 주는 대파입니다."
+  },
+  "쪽파": {
+    "grow_time": 190,
+    "buy_price": 45,
+    "sell_price": 90,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 13,
+    "crop_type": "채소",
+    "description": "가늘고 향긋한 쪽파입니다."
+  },
+  "배추": {
+    "grow_time": 160,
+    "buy_price": 40,
+    "sell_price": 75,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 11,
+    "crop_type": "채소",
+    "description": "김장의 주인공, 속이 꽉 찬 배추입니다."
+  },
+  "양배추": {
+    "grow_time": 240,
+    "buy_price": 55,
+    "sell_price": 100,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 16,
+    "crop_type": "채소",
+    "description": "아삭한 식감의 둥근 양배추입니다."
+  },
+  "부추": {
+    "grow_time": 140,
+    "buy_price": 35,
+    "sell_price": 70,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 10,
+    "crop_type": "채소",
+    "description": "베어도 다시 자라는 부추입니다."
+  },
+  "열무": {
+    "grow_time": 150,
+    "buy_price": 35,
+    "sell_price": 65,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 10,
+    "crop_type": "채소",
+    "description": "여름 김치로 좋은 연한 열무입니다."
+  },
+  "청경채": {
+    "grow_time": 260,
+    "buy_price": 60,
+    "sell_price": 120,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 18,
+    "crop_type": "채소",
+    "description": "볶음 요리에 잘 어울리는 청경채입니다."
+  },
+  "쑥갓": {
+    "grow_time": 280,
+    "buy_price": 65,
+    "sell_price": 115,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 19,
+    "crop_type": "채소",
+    "description": "독특한 향이 매력적인 쑥갓입니다."
+  },
+  "미나리": {
+    "grow_time": 150,
+    "buy_price": 35,
+    "sell_price": 70,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 10,
+    "crop_type": "채소",
+    "description": "물가에서 잘 자라는 향긋한 미나리입니다."
+  },
+  "옥수수": {
+    "grow_time": 210,
+    "buy_price": 50,
+    "sell_price": 95,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 14,
+    "crop_type": "곡물",
+    "description": "알알이 꽉 찬 찰옥수수입니다."
+  },
+  "밀": {
+    "grow_time": 170,
+    "buy_price": 40,
+    "sell_price": 75,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 12,
+    "crop_type": "곡물",
+    "description": "빵과 국수의 재료가 되는 밀입니다."
+  },
+  "보리": {
+    "grow_time": 240,
+    "buy_price": 55,
+    "sell_price": 100,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 16,
+    "crop_type": "곡물",
+    "description": "구수한 보리차의 재료, 보리입니다."
+  },
+  "벼": {
+    "grow_time": 160,
+    "buy_price": 40,
+    "sell_price": 75,
+    "buy_grade": 1,
+    "difficulty": 2,
+    "exp": 11,
+    "crop_type": "곡물",
+    "description": "밥이 되는 소중한 벼입니다."
+  },
+  "콩": {
+    "grow_time": 280,
+    "buy_price": 65,
+    "sell_price": 125,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 19,
+    "crop_type": "콩류",
+    "description": "된장과 두부의 재료가 되는 콩입니다."
+  },
+  "팥": {
+    "grow_time": 260,
+    "buy_price": 60,
+    "sell_price": 115,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 18,
+    "crop_type": "콩류",
+    "description": "팥빙수에 빠질 수 없는 붉은 팥입니다."
+  },
+  "완두콩": {
+    "grow_time": 170,
+    "buy_price": 40,
+    "sell_price": 80,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 12,
+    "crop_type": "콩류",
+    "description": "꼬투리 속에 동글동글 들어찬 완두콩입니다."
+  },
+  "녹두": {
+    "grow_time": 230,
+    "buy_price": 55,
+    "sell_price": 105,
+    "buy_grade": 1,
+    "difficulty": 1,
+    "exp": 16,
+    "crop_type": "콩류",
+    "description": "숙주나물과 빈대떡의 재료, 녹두입니다."
+  },
+  "고추": {
+    "grow_time": 440,
+    "buy_price": 120,
+    "sell_price": 225,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 33,
+    "crop_type": "과채류",
+    "description": "맵싸한 맛이 일품인 빨간 고추입니다."
+  },
+  "가지": {
+    "grow_time": 470,
+    "buy_price": 125,
+    "sell_price": 245,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 35,
+    "crop_type": "과채류",
+    "description": "보랏빛 윤기가 흐르는 가지입니다."
+  },
+  "호박": {
+    "grow_time": 410,
+    "buy_price": 110,
+    "sell_price": 210,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 31,
+    "crop_type": "과채류",
+    "description": "늙을수록 달아지는 누런 호박입니다."
+  },
+  "애호박": {
+    "grow_time": 520,
+    "buy_price": 140,
+    "sell_price": 265,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 39,
+    "crop_type": "과채류",
+    "description": "전과 찌개에 좋은 연한 애호박입니다."
+  },
+  "피망": {
+    "grow_time": 500,
+    "buy_price": 135,
+    "sell_price": 245,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 37,
+    "crop_type": "과채류",
+    "description": "아삭하고 쌉싸름한 피망입니다."
+  },
+  "파프리카": {
+    "grow_time": 500,
+    "buy_price": 135,
+    "sell_price": 250,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 37,
+    "crop_type": "과채류",
+    "description": "알록달록 달콤한 파프리카입니다."
+  },
+  "브로콜리": {
+    "grow_time": 480,
+    "buy_price": 130,
+    "sell_price": 240,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 36,
+    "crop_type": "채소",
+    "description": "작은 나무처럼 생긴 브로콜리입니다."
+  },
+  "콜리플라워": {
+    "grow_time": 450,
+    "buy_price": 120,
+    "sell_price": 215,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 34,
+    "crop_type": "채소",
+    "description": "하얀 꽃송이 같은 콜리플라워입니다."
+  },
+  "셀러리": {
+    "grow_time": 580,
+    "buy_price": 155,
+    "sell_price": 280,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 43,
+    "crop_type": "채소",
+    "description": "아삭하고 향이 강한 셀러리입니다."
+  },
+  "아스파라거스": {
+    "grow_time": 550,
+    "buy_price": 145,
+    "sell_price": 270,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 41,
+    "crop_type": "채소",
+    "description": "봄에 올라오는 연한 아스파라거스입니다."
+  },
+  "비트": {
+    "grow_time": 600,
+    "buy_price": 160,
+    "sell_price": 320,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 45,
+    "crop_type": "뿌리채소",
+    "description": "속이 진한 붉은색인 비트입니다."
+  },
+  "래디시": {
+    "grow_time": 530,
+    "buy_price": 140,
+    "sell_price": 275,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 40,
+    "crop_type": "뿌리채소",
+    "description": "작고 동그란 빨간 래디시입니다."
+  },
+  "마늘": {
+    "grow_time": 310,
+    "buy_price": 80,
+    "sell_price": 145,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 23,
+    "crop_type": "뿌리채소",
+    "description": "한국 요리에 빠질 수 없는 마늘입니다."
+  },
+  "생강": {
+    "grow_time": 550,
+    "buy_price": 145,
+    "sell_price": 265,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 41,
+    "crop_type": "뿌리채소",
+    "description": "몸을 따뜻하게 해 주는 생강입니다."
+  },
+  "우엉": {
+    "grow_time": 490,
+    "buy_price": 130,
+    "sell_price": 240,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 37,
+    "crop_type": "뿌리채소",
+    "description": "땅속 깊이 자라는 길쭉한 우엉입니다."
+  },
+  "연근": {
+    "grow_time": 320,
+    "buy_price": 85,
+    "sell_price": 155,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 24,
+    "crop_type": "뿌리채소",
+    "description": "구멍이 송송 뚫린 연근입니다."
+  },
+  "토란": {
+    "grow_time": 360,
+    "buy_price": 95,
+    "sell_price": 170,
+    "buy_grade": 2,
+    "difficulty": 2,
+    "exp": 27,
+    "crop_type": "뿌리채소",
+    "description": "추석 토란국의 주인공, 토란입니다."
+  },
+  "땅콩": {
+    "grow_time": 340,
+    "buy_price": 90,
+    "sell_price": 165,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 25,
+    "crop_type": "콩류",
+    "description": "땅속에서 열매를 맺는 고소한 땅콩입니다."
+  },
+  "강낭콩": {
+    "grow_time": 450,
+    "buy_price": 120,
+    "sell_price": 235,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 34,
+    "crop_type": "콩류",
+    "description": "밥에 넣어 먹는 알록달록 강낭콩입니다."
+  },
+  "메밀": {
+    "grow_time": 450,
+    "buy_price": 120,
+    "sell_price": 230,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 34,
+    "crop_type": "곡물",
+    "description": "메밀국수의 재료, 하얀 꽃이 피는 메밀입니다."
+  },
+  "귀리": {
+    "grow_time": 560,
+    "buy_price": 150,
+    "sell_price": 295,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 42,
+    "crop_type": "곡물",
+    "description": "건강한 아침 식사가 되는 귀리입니다."
+  },
+  "수수": {
+    "grow_time": 500,
+    "buy_price": 135,
+    "sell_price": 255,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 37,
+    "crop_type": "곡물",
+    "description": "붉은 이삭이 고개를 숙이는 수수입니다."
+  },
+  "해바라기": {
+    "grow_time": 570,
+    "buy_price": 150,
+    "sell_price": 285,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 43,
+    "crop_type": "꽃",
+    "description": "해를 따라 고개를 돌리는 해바라기입니다."
+  },
+  "바질": {
+    "grow_time": 390,
+    "buy_price": 105,
+    "sell_price": 205,
+    "buy_grade": 2,
+    "difficulty": 1,
+    "exp": 29,
+    "crop_type": "허브",
+    "description": "파스타에 잘 어울리는 향긋한 바질입니다."
+  },
+  "참외": {
+    "grow_time": 990,
+    "buy_price": 270,
+    "sell_price": 495,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 82,
+    "crop_type": "과채류",
+    "description": "노란 껍질 속 달콤한 참외입니다."
+  },
+  "멜론": {
+    "grow_time": 720,
+    "buy_price": 210,
+    "sell_price": 390,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 60,
+    "crop_type": "과채류",
+    "description": "그물무늬 껍질의 향긋한 멜론입니다."
+  },
+  "블루베리": {
+    "grow_time": 980,
+    "buy_price": 270,
+    "sell_price": 530,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 81,
+    "crop_type": "과일",
+    "description": "작지만 영양 가득한 블루베리입니다."
+  },
+  "라즈베리": {
+    "grow_time": 1110,
+    "buy_price": 300,
+    "sell_price": 575,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 92,
+    "crop_type": "과일",
+    "description": "새콤한 붉은 열매, 라즈베리입니다."
+  },
+  "포도": {
+    "grow_time": 860,
+    "buy_price": 240,
+    "sell_price": 460,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 71,
+    "crop_type": "과일",
+    "description": "송이송이 탐스러운 포도입니다."
+  },
+  "키위": {
+    "grow_time": 760,
+    "buy_price": 220,
+    "sell_price": 415,
+    "buy_grade": 3,
+    "difficulty": 2,
+    "exp": 63,
+    "crop_type": "과일",
+    "description": "털 난 껍질 속 초록 과육의 키위입니다."
+  },
+  "자두": {
+    "grow_time": 1010,
+    "buy_price": 275,
+    "sell_price": 520,
+    "buy_grade": 3,
+    "difficulty": 2,
+    "exp": 83,
+    "crop_type": "과일",
+    "description": "새콤달콤한 여름 과일, 자두입니다."
+  },
+  "복숭아": {
+    "grow_time": 1090,
+    "buy_price": 295,
+    "sell_price": 570,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 90,
+    "crop_type": "과일",
+    "description": "말랑하고 달콤한 복숭아입니다."
+  },
+  "살구": {
+    "grow_time": 1090,
+    "buy_price": 295,
+    "sell_price": 540,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 90,
+    "crop_type": "과일",
+    "description": "주황빛으로 익는 살구입니다."
+  },
+  "체리": {
+    "grow_time": 1140,
+    "buy_price": 305,
+    "sell_price": 550,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 94,
+    "crop_type": "과일",
+    "description": "작고 붉은 보석 같은 체리입니다."
+  },
+  "감": {
+    "grow_time": 1200,
+    "buy_price": 320,
+    "sell_price": 635,
+    "buy_grade": 3,
+    "difficulty": 1,
+    "exp": 99,
+    "crop_type": "과일",
+    "description": "가을 햇살에 익어 가는 주황색 감입니다."
+  },
+  "귤": {
+    "grow_time": 730,
+    "buy_price": 210,
+    "sell_price": 410,
+    "buy_grade": 3,
+    "difficulty": 1,
+    "exp": 60,
+    "crop_type": "과일",
+    "description": "겨울철 이불 속 간식, 귤입니다."
+  },
+  "무화과": {
+    "grow_time": 930,
+    "buy_price": 255,
+    "sell_price": 470,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 77,
+    "crop_type": "과일",
+    "description": "꽃이 열매 속에 숨어 있는 무화과입니다."
+  },
+  "석류": {
+    "grow_time": 680,
+    "buy_price": 200,
+    "sell_price": 370,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 56,
+    "crop_type": "과일",
+    "description": "붉은 알갱이가 가득한 석류입니다."
+  },
+  "로즈마리": {
+    "grow_time": 650,
+    "buy_price": 190,
+    "sell_price": 355,
+    "buy_grade": 3,
+    "difficulty": 2,
+    "exp": 54,
+    "crop_type": "허브",
+    "description": "고기 요리에 향을 더하는 로즈마리입니다."
+  },
+  "민트": {
+    "grow_time": 1150,
+    "buy_price": 310,
+    "sell_price": 620,
+    "buy_grade": 3,
+    "difficulty": 1,
+    "exp": 95,
+    "crop_type": "허브",
+    "description": "상쾌한 향의 민트입니다."
+  },
+  "라벤더": {
+    "grow_time": 1200,
+    "buy_price": 320,
+    "sell_price": 580,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 99,
+    "crop_type": "꽃",
+    "description": "보랏빛 향기로운 라벤더입니다."
+  },
+  "캐모마일": {
+    "grow_time": 1090,
+    "buy_price": 295,
+    "sell_price": 555,
+    "buy_grade": 3,
+    "difficulty": 2,
+    "exp": 90,
+    "crop_type": "꽃",
+    "description": "차로 마시면 마음이 편해지는 캐모마일입니다."
+  },
+  "튤립": {
+    "grow_time": 1200,
+    "buy_price": 320,
+    "sell_price": 610,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 99,
+    "crop_type": "꽃",
+    "description": "봄을 알리는 알록달록한 튤립입니다."
+  },
+  "장미": {
+    "grow_time": 760,
+    "buy_price": 215,
+    "sell_price": 395,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 63,
+    "crop_type": "꽃",
+    "description": "가시 속에 피어나는 아름다운 장미입니다."
+  },
+  "아티초크": {
+    "grow_time": 860,
+    "buy_price": 240,
+    "sell_price": 470,
+    "buy_grade": 3,
+    "difficulty": 3,
+    "exp": 71,
+    "crop_type": "채소",
+    "description": "꽃봉오리를 먹는 독특한 아티초크입니다."
+  },
+  "참깨": {
+    "grow_time": 680,
+    "buy_price": 200,
+    "sell_price": 400,
+    "buy_grade": 3,
+    "difficulty": 2,
+    "exp": 56,
+    "crop_type": "곡물",
+    "description": "고소한 참기름의 재료, 참깨입니다."
+  },
+  "사과": {
+    "grow_time": 1700,
+    "buy_price": 465,
+    "sell_price": 910,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 157,
+    "crop_type": "과일",
+    "description": "빨갛게 잘 익은 아삭한 사과입니다."
+  },
+  "배": {
+    "grow_time": 2260,
+    "buy_price": 590,
+    "sell_price": 1175,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 209,
+    "crop_type": "과일",
+    "description": "시원한 과즙이 가득한 배입니다."
+  },
+  "오렌지": {
+    "grow_time": 2320,
+    "buy_price": 600,
+    "sell_price": 1190,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 215,
+    "crop_type": "과일",
+    "description": "상큼한 비타민의 왕, 오렌지입니다."
+  },
+  "레몬": {
+    "grow_time": 1770,
+    "buy_price": 480,
+    "sell_price": 885,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 164,
+    "crop_type": "과일",
+    "description": "한 입만 먹어도 찡그려지는 레몬입니다."
+  },
+  "망고": {
+    "grow_time": 1400,
+    "buy_price": 395,
+    "sell_price": 780,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 130,
+    "crop_type": "과일",
+    "description": "열대의 달콤함, 노란 망고입니다."
+  },
+  "파인애플": {
+    "grow_time": 1690,
+    "buy_price": 460,
+    "sell_price": 870,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 156,
+    "crop_type": "과일",
+    "description": "왕관을 쓴 열대 과일, 파인애플입니다."
+  },
+  "바나나": {
+    "grow_time": 1920,
+    "buy_price": 510,
+    "sell_price": 985,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 178,
+    "crop_type": "과일",
+    "description": "송이째 열리는 노란 바나나입니다."
+  },
+  "아보카도": {
+    "grow_time": 1430,
+    "buy_price": 400,
+    "sell_price": 775,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 132,
+    "crop_type": "과일",
+    "description": "버터처럼 부드러운 아보카도입니다."
+  },
+  "코코넛": {
+    "grow_time": 2370,
+    "buy_price": 610,
+    "sell_price": 1155,
+    "buy_grade": 4,
+    "difficulty": 2,
+    "exp": 219,
+    "crop_type": "과일",
+    "description": "단단한 껍질 속 시원한 코코넛입니다."
+  },
+  "패션프루트": {
+    "grow_time": 2200,
+    "buy_price": 575,
+    "sell_price": 1100,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 204,
+    "crop_type": "과일",
+    "description": "향이 진한 열대 과일, 패션프루트입니다."
+  },
+  "용과": {
+    "grow_time": 1590,
+    "buy_price": 440,
+    "sell_price": 845,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 147,
+    "crop_type": "과일",
+    "description": "선인장에서 열리는 화려한 용과입니다."
+  },
+  "리치": {
+    "grow_time": 2380,
+    "buy_price": 615,
+    "sell_price": 1200,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 220,
+    "crop_type": "과일",
+    "description": "하얀 과육이 향긋한 리치입니다."
+  },
+  "커피콩": {
+    "grow_time": 1350,
+    "buy_price": 385,
+    "sell_price": 695,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 125,
+    "crop_type": "콩류",
+    "description": "향긋한 커피가 되는 커피콩입니다."
+  },
+  "카카오": {
+    "grow_time": 1390,
+    "buy_price": 395,
+    "sell_price": 725,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 129,
+    "crop_type": "콩류",
+    "description": "초콜릿의 재료가 되는 카카오입니다."
+  },
+  "바닐라": {
+    "grow_time": 1510,
+    "buy_price": 420,
+    "sell_price": 795,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 140,
+    "crop_type": "허브",
+    "description": "달콤한 향의 귀한 향신료, 바닐라입니다."
+  },
+  "연꽃": {
+    "grow_time": 2080,
+    "buy_price": 545,
+    "sell_price": 1070,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 193,
+    "crop_type": "꽃",
+    "description": "진흙 속에서 피어나는 연꽃입니다."
+  },
+  "백합": {
+    "grow_time": 2360,
+    "buy_price": 610,
+    "sell_price": 1165,
+    "buy_grade": 4,
+    "difficulty": 3,
+    "exp": 219,
+    "crop_type": "꽃",
+    "description": "순백의 우아한 백합입니다."
+  },
+  "샤인머스캣": {
+    "grow_time": 3200,
+    "buy_price": 900,
+    "sell_price": 1650,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 337,
+    "crop_type": "과일",
+    "description": "망고 향이 나는 고급 청포도, 샤인머스캣입니다."
+  },
+  "두리안": {
+    "grow_time": 4090,
+    "buy_price": 1125,
+    "sell_price": 2095,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 431,
+    "crop_type": "과일",
+    "description": "냄새는 지독하지만 맛은 최고인 과일의 왕입니다."
+  },
+  "망고스틴": {
+    "grow_time": 3630,
+    "buy_price": 1010,
+    "sell_price": 1960,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 382,
+    "crop_type": "과일",
+    "description": "과일의 여왕이라 불리는 망고스틴입니다."
+  },
+  "아사이베리": {
+    "grow_time": 2710,
+    "buy_price": 780,
+    "sell_price": 1485,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 285,
+    "crop_type": "과일",
+    "description": "아마존에서 온 슈퍼푸드, 아사이베리입니다."
+  },
+  "람부탄": {
+    "grow_time": 3230,
+    "buy_price": 910,
+    "sell_price": 1655,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 340,
+    "crop_type": "과일",
+    "description": "털복숭이 껍질 속 달콤한 람부탄입니다."
+  },
+  "체리모야": {
+    "grow_time": 3130,
+    "buy_price": 880,
+    "sell_price": 1630,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 329,
+    "crop_type": "과일",
+    "description": "커스터드 크림 맛이 나는 체리모야입니다."
+  },
+  "황금사과": {
+    "grow_time": 2900,
+    "buy_price": 825,
+    "sell_price": 1585,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 305,
+    "crop_type": "과일",
+    "description": "전설 속에서나 볼 수 있는 황금빛 사과입니다."
+  },
+  "황금멜론": {
+    "grow_time": 4140,
+    "buy_price": 1135,
+    "sell_price": 2185,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 436,
+    "crop_type": "과채류",
+    "description": "금빛으로 빛나는 귀한 멜론입니다."
+  },
+  "와사비": {
+    "grow_time": 2480,
+    "buy_price": 720,
+    "sell_price": 1360,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 261,
+    "crop_type": "뿌리채소",
+    "description": "맑은 물에서만 자라는 귀한 와사비입니다."
+  },
+  "산삼": {
+    "grow_time": 4030,
+    "buy_price": 1110,
+    "sell_price": 2015,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 424,
+    "crop_type": "뿌리채소",
+    "description": "깊은 산속에서 수십 년을 자란 산삼입니다."
+  },
+  "사프란": {
+    "grow_time": 3760,
+    "buy_price": 1040,
+    "sell_price": 2020,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 396,
+    "crop_type": "꽃",
+    "description": "금보다 비싼 향신료가 되는 사프란입니다."
+  },
+  "블루로즈": {
+    "grow_time": 2510,
+    "buy_price": 725,
+    "sell_price": 1345,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 264,
+    "crop_type": "꽃",
+    "description": "세상에 없던 푸른 장미입니다."
+  },
+  "에델바이스": {
+    "grow_time": 4490,
+    "buy_price": 1225,
+    "sell_price": 2250,
+    "buy_grade": 5,
+    "difficulty": 3,
+    "exp": 473,
+    "crop_type": "꽃",
+    "description": "높은 산에서만 피는 고귀한 에델바이스입니다."
   }
 }

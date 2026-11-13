@@ -1,5 +1,7 @@
 from discord import app_commands
 
+from utils.command_mention import command_mention
+
 
 class UserNotRegistered(app_commands.AppCommandError):
     """유저가 DB에 없을 때 발생시킬 커스텀 예외"""
@@ -10,7 +12,8 @@ class UserNotRegistered(app_commands.AppCommandError):
         message: str | None = None,
     ):
         self.message = (
-            message or "가입되지 않은 유저입니다. `/회원가입`을 먼저 진행해 주세요."
+            message
+            or f"가입되지 않은 유저입니다. {command_mention('회원가입')}을 먼저 진행해 주세요."
         )
         self.user_id = user_id
         super().__init__(self.message)

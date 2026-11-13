@@ -1,0 +1,77 @@
+{
+  "최하급_비료": {
+    "name": "최하급 비료",
+    "grade": 1,
+    "reduce_minutes": 1,
+    "price": 20,
+    "description": "땅 하나의 남은 성장 시간을 1분 줄여 줍니다."
+  },
+  "하급_비료": {
+    "name": "하급 비료",
+    "grade": 2,
+    "reduce_minutes": 2,
+    "price": 50,
+    "description": "땅 하나의 남은 성장 시간을 2분 줄여 줍니다."
+  },
+  "중급_비료": {
+    "name": "중급 비료",
+    "grade": 3,
+    "reduce_minutes": 5,
+    "price": 120,
+    "description": "땅 하나의 남은 성장 시간을 5분 줄여 줍니다."
+  },
+  "상급_비료": {
+    "name": "상급 비료",
+    "grade": 4,
+    "reduce_minutes": 10,
+    "price": 250,
+    "description": "땅 하나의 남은 성장 시간을 10분 줄여 줍니다."
+  },
+  "최하급_황금_비료": {
+    "name": "최하급 황금 비료",
+    "grade": 1,
+    "reduce_minutes": 0,
+    "quality_bonus": 2,
+    "price": 30,
+    "description": "성장 시간은 그대로지만, 수확할 때 별이 붙을 확률이 조금 올라갑니다."
+  },
+  "하급_황금_비료": {
+    "name": "하급 황금 비료",
+    "grade": 2,
+    "reduce_minutes": 0,
+    "quality_bonus": 3,
+    "price": 70,
+    "description": "성장 시간은 그대로지만, 수확할 때 별이 붙을 확률이 올라갑니다."
+  },
+  "중급_황금_비료": {
+    "name": "중급 황금 비료",
+    "grade": 3,
+    "reduce_minutes": 0,
+    "quality_bonus": 4,
+    "price": 150,
+    "description": "성장 시간은 그대로지만, 수확할 때 별이 많이 붙을 확률이 올라갑니다."
+  },
+  "상급_황금_비료": {
+    "name": "상급 황금 비료",
+    "grade": 4,
+    "reduce_minutes": 0,
+    "quality_bonus": 5,
+    "price": 300,
+    "description": "성장 시간은 그대로지만, 수확할 때 별이 많이 붙을 확률이 크게 올라갑니다."
+  },
+  "최상급_황금_비료": {
+    "name": "최상급 황금 비료",
+    "grade": 5,
+    "reduce_minutes": 0,
+    "quality_bonus": 7,
+    "price": 600,
+    "description": "성장 시간은 그대로지만, 수확할 때 최고 품질이 나올 확률이 매우 높아집니다."
+  },
+  "최상급_비료": {
+    "name": "최상급 비료",
+    "grade": 5,
+    "reduce_minutes": 20,
+    "price": 500,
+    "description": "땅 하나의 남은 성장 시간을 20분 줄여 줍니다."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "points_per_level": 1,
+  "reset_cost_per_level": 200,
+  "branches": [
+    { "id": "trade", "name": "상인", "emoji": "💰" },
+    { "id": "farm", "name": "재배", "emoji": "🌱" },
+    { "id": "craft", "name": "장인", "emoji": "🔨" }
+  ],
+  "nodes": [
+    {
+      "id": "trade_sell",
+      "branch": "trade",
+      "name": "흥정의 달인",
+      "description": "수확물 판매가 +5%",
+      "effect": "sell_price_pct",
+      "per_rank": 5,
+      "max_rank": 3,
+      "requires": []
+    },
+    {
+      "id": "trade_discount",
+      "branch": "trade",
+      "name": "단골 손님",
+      "description": "상점 구매가 -5%",
+      "effect": "shop_discount_pct",
+      "per_rank": 5,
+      "max_rank": 3,
+      "requires": [{ "node": "trade_sell", "rank": 2 }]
+    },
+    {
+      "id": "trade_sell_2",
+      "branch": "trade",
+      "name": "명품 브랜드",
+      "description": "수확물 판매가 +10%",
+      "effect": "sell_price_pct",
+      "per_rank": 10,
+      "max_rank": 2,
+      "requires": [{ "node": "trade_discount", "rank": 3 }]
+    },
+    {
+      "id": "farm_care",
+      "branch": "farm",
+      "name": "정성 어린 손길",
+      "description": "수확 품질 점수 +1 (별 확률 ↑)",
+      "effect": "care_points",
+      "per_rank": 1,
+      "max_rank": 2,
+      "requires": []
+    },
+    {
+      "id": "farm_mutation",
+      "branch": "farm",
+      "name": "변이 연구",
+      "description": "돌연변이 확률 +1%p",
+      "effect": "mutation_chance",
+      "per_rank": 0.01,
+      "max_rank": 3,
+      "requires": [{ "node": "farm_care", "rank": 1 }]
+    },
+    {
+      "id": "farm_golden",
+      "branch": "farm",
+      "name": "황금 손",
+      "description": "황금 작물 확률 +0.5%p",
+      "effect": "golden_chance",
+      "per_rank": 0.005,
+      "max_rank": 3,
+      "requires": [{ "node": "farm_mutation", "rank": 2 }]
+    },
+    {
+      "id": "craft_saving",
+      "branch": "craft",
+      "name": "알뜰한 장인",
+      "description": "제작 재료 -10%",
+      "effect": "craft_material_pct",
+      "per_rank": 10,
+      "max_rank": 3,
+      "requires": []
+    },
+    {
+      "id": "craft_master",
+      "branch": "craft",
+      "name": "숙련 장인",
+      "description": "제작 재료 -5% · 제작 골드 비용 -20%",
+      "effect": "craft_material_pct",
+      "per_rank": 5,
+      "extra_effect": "craft_gold_pct",
+      "extra_per_rank": 20,
+      "max_rank": 2,
+      "requires": [{ "node": "craft_saving", "rank": 2 }]
+    }
+  ]
+}

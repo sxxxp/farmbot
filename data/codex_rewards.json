@@ -1,0 +1,22 @@
+{
+  "normal": [
+    { "count": 5, "effect": "sell_price_pct", "value": 2 },
+    { "count": 15, "effect": "grow_time_pct", "value": 5 },
+    { "count": 30, "effect": "exp_pct", "value": 5 },
+    { "count": 50, "effect": "sell_price_pct", "value": 3 },
+    { "count": 75, "effect": "grow_time_pct", "value": 5 },
+    { "count": 100, "effect": "sell_price_pct", "value": 5 }
+  ],
+  "golden": [
+    { "count": 1, "effect": "golden_chance", "value": 0.002 },
+    { "count": 5, "effect": "sell_price_pct", "value": 3 },
+    { "count": 10, "effect": "golden_chance", "value": 0.003 },
+    { "count": 25, "effect": "grow_time_pct", "value": 5 }
+  ],
+  "mutant": [
+    { "count": 1, "effect": "mutation_chance", "value": 0.005 },
+    { "count": 5, "effect": "care_points", "value": 1 },
+    { "count": 10, "effect": "mutation_chance", "value": 0.01 },
+    { "count": 25, "effect": "exp_pct", "value": 10 }
+  ]
+}

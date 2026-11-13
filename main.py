@@ -6,6 +6,7 @@ import discord
 
 from discord.ext import commands
 import config
+from utils.command_mention import register_commands
 from utils.errorcheck import UserNotRegistered
 
 intents = discord.Intents.default()
@@ -41,6 +42,7 @@ class FarmBot(commands.Bot):
         print(f"Cogs 로드가 {'완료되었습니다.' if flag else '실패했습니다. ⚠️'}")
         self.tree.copy_global_to(guild=discord.Object(id=1116522262426824756))
         synced = await self.tree.sync(guild=discord.Object(id=1116522262426824756))
+        register_commands(synced)  # 메시지에서 </명령어:ID> 멘션을 쓰기 위해 ID 저장
         print(f"{len(synced)}개의 명령어 동기화가 완료되었습니다.")
 
     async def close(self):

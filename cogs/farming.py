@@ -20,7 +20,7 @@ class Farming(commands.Cog):
             if current.lower() in crop_id.lower()
         ][:25]
 
-    @app_commands.command(name="농사")
+    @app_commands.command(name="농사", description="내 농장을 보고 씨앗 심기·물주기·비료·수확을 합니다.")
     @is_registered()
     async def farm_status(self, interaction: Interaction):
         farmService = FarmService()
@@ -29,10 +29,15 @@ class Farming(commands.Cog):
         embed = view.create_embed(view)
         await interaction.response.send_message(embed=embed, view=view)
 
-    @app_commands.command(name="작물")
+    @app_commands.command(name="작물", description="작물의 성장 시간·가격·등급·난이도를 확인합니다.")
     @app_commands.autocomplete(작물이름=crop_autocomplete)
     async def crop_info(self, interaction: Interaction, 작물이름: str):
         embed = embed_crop_info(작물이름)
+        if embed is None:
+            await interaction.response.send_message(
+                f"'{작물이름}'(이)라는 작물은 존재하지 않습니다.", ephemeral=True
+            )
+            return
         await interaction.response.send_message(
             f"{interaction.user.mention}님, {작물이름}에 대한 정보입니다! 🌱",
             embed=embed,

@@ -36,6 +36,18 @@ class UserRepository(BaseRepository):
             user_id,
         )
 
+    async def spend_gold(self, user_id: int, amount: int) -> int | None:
+        """골드 차감. 잔액이 부족하면 아무것도 바꾸지 않고 None, 성공하면 남은 골드"""
+        return await self.conn.fetchval(
+            """
+            UPDATE users SET gold = gold - $2
+            WHERE user_id = $1 AND gold >= $2
+            RETURNING gold;
+            """,
+            user_id,
+            amount,
+        )
+
     async def get_user_exp(self, user_id: int):
         """사용자 레벨 조회"""
 

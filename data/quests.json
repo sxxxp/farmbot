@@ -1,0 +1,366 @@
+{
+  "daily": [
+    {
+      "id": "daily_plant_3",
+      "title": "오늘의 파종",
+      "description": "아무 씨앗이나 3번 심으세요.",
+      "min_level": 1,
+      "max_level": null,
+      "objective": { "type": "plant", "target": null, "count": 3 },
+      "reward": { "gold": 50, "exp": 15, "items": {} }
+    },
+    {
+      "id": "daily_water_3",
+      "title": "아침 물주기",
+      "description": "작물에 물을 3번 주세요.",
+      "min_level": 1,
+      "max_level": 2,
+      "objective": { "type": "water", "target": null, "count": 3 },
+      "reward": { "gold": 40, "exp": 10, "items": { "당근_seed": 1 } }
+    },
+    {
+      "id": "daily_harvest_3",
+      "title": "오늘의 수확",
+      "description": "아무 작물이나 3번 수확하세요.",
+      "min_level": 1,
+      "max_level": 2,
+      "objective": { "type": "harvest", "target": null, "count": 3 },
+      "reward": { "gold": 60, "exp": 20, "items": { "당근_seed": 2 } }
+    },
+    {
+      "id": "daily_carrot_3",
+      "title": "당근 배달",
+      "description": "당근을 3번 수확하세요.",
+      "min_level": 1,
+      "max_level": 2,
+      "objective": { "type": "harvest", "target": "당근", "count": 3 },
+      "reward": { "gold": 70, "exp": 20, "items": { "당근_seed": 3 } }
+    },
+    {
+      "id": "daily_tomato_3",
+      "title": "토마토 주문",
+      "description": "토마토를 3번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "토마토", "count": 3 },
+      "reward": { "gold": 120, "exp": 40, "items": { "토마토_seed": 2 } }
+    },
+    {
+      "id": "daily_cucumber_3",
+      "title": "오이 주문",
+      "description": "오이를 3번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "오이", "count": 3 },
+      "reward": { "gold": 110, "exp": 45, "items": { "오이_seed": 2 } }
+    },
+    {
+      "id": "daily_water_8",
+      "title": "꼼꼼한 관리",
+      "description": "작물에 물을 8번 주세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "water", "target": null, "count": 8 },
+      "reward": { "gold": 150, "exp": 50, "items": {} }
+    },
+    {
+      "id": "daily_harvest_10",
+      "title": "바쁜 수확철",
+      "description": "아무 작물이나 10번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "count": 10 },
+      "reward": { "gold": 200, "exp": 80, "items": { "토마토_seed": 3 } }
+    },
+    {
+      "id": "daily_plant_veg_4",
+      "title": "푸른 채소밭",
+      "description": "채소 씨앗을 4번 심으세요. (상추, 시금치, 배추 …)",
+      "min_level": 1,
+      "max_level": 4,
+      "objective": { "type": "plant", "target": null, "crop_type": "채소", "count": 4 },
+      "reward": { "gold": 60, "exp": 20, "items": { "상추_seed": 2 } }
+    },
+    {
+      "id": "daily_harvest_root_3",
+      "title": "땅속의 보물",
+      "description": "뿌리채소를 3번 수확하세요. (감자, 고구마, 무 …)",
+      "min_level": 1,
+      "max_level": 4,
+      "objective": { "type": "harvest", "target": null, "crop_type": "뿌리채소", "count": 3 },
+      "reward": { "gold": 70, "exp": 25, "items": { "고구마_seed": 2 } }
+    },
+    {
+      "id": "daily_harvest_grain_3",
+      "title": "오늘의 곡식",
+      "description": "곡물을 3번 수확하세요. (벼, 밀, 보리, 옥수수 …)",
+      "min_level": 1,
+      "max_level": 5,
+      "objective": { "type": "harvest", "target": null, "crop_type": "곡물", "count": 3 },
+      "reward": { "gold": 70, "exp": 25, "items": { "벼_seed": 2 } }
+    },
+    {
+      "id": "daily_harvest_legume_3",
+      "title": "콩 심은 데 콩 난다",
+      "description": "콩류를 3번 수확하세요. (콩, 팥, 완두콩 …)",
+      "min_level": 1,
+      "max_level": 5,
+      "objective": { "type": "harvest", "target": null, "crop_type": "콩류", "count": 3 },
+      "reward": { "gold": 70, "exp": 25, "items": { "콩_seed": 2 } }
+    },
+    {
+      "id": "daily_potato_2",
+      "title": "감자 캐기",
+      "description": "감자를 2번 수확하세요.",
+      "min_level": 1,
+      "max_level": 3,
+      "objective": { "type": "harvest", "target": "감자", "count": 2 },
+      "reward": { "gold": 60, "exp": 20, "items": { "감자_seed": 3 } }
+    },
+    {
+      "id": "daily_herb_3",
+      "title": "향긋한 하루",
+      "description": "허브를 3번 수확하세요. (깻잎, 바질 …)",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "허브", "count": 3 },
+      "reward": { "gold": 100, "exp": 35, "items": { "바질_seed": 2 } }
+    },
+    {
+      "id": "daily_fruitveg_3",
+      "title": "주렁주렁 열매채소",
+      "description": "과채류를 3번 수확하세요. (고추, 가지, 호박 …)",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "과채류", "count": 3 },
+      "reward": { "gold": 110, "exp": 40, "items": { "고추_seed": 2 } }
+    },
+    {
+      "id": "daily_plant_fruit_2",
+      "title": "과일나무 심기",
+      "description": "과일 씨앗을 2번 심으세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "plant", "target": null, "crop_type": "과일", "count": 2 },
+      "reward": { "gold": 150, "exp": 50, "items": { "하급_비료": 2 } }
+    },
+    {
+      "id": "daily_harvest_fruit_3",
+      "title": "오늘의 과일",
+      "description": "과일을 3번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "과일", "count": 3 },
+      "reward": { "gold": 220, "exp": 80, "items": { "포도_seed": 2 } }
+    },
+    {
+      "id": "daily_flower_2",
+      "title": "꽃다발 주문",
+      "description": "꽃을 2번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "꽃", "count": 2 },
+      "reward": { "gold": 180, "exp": 60, "items": { "튤립_seed": 2 } }
+    },
+    {
+      "id": "daily_water_fruit_5",
+      "title": "과수원 물주기",
+      "description": "과일에 물을 5번 주세요.",
+      "min_level": 4,
+      "max_level": null,
+      "objective": { "type": "water", "target": null, "crop_type": "과일", "count": 5 },
+      "reward": { "gold": 200, "exp": 70, "items": { "중급_비료": 1 } }
+    },
+    {
+      "id": "daily_apple_2",
+      "title": "사과 한 바구니",
+      "description": "사과를 2번 수확하세요.",
+      "min_level": 5,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "사과", "count": 2 },
+      "reward": { "gold": 350, "exp": 120, "items": { "사과_seed": 1 } }
+    },
+    {
+      "id": "daily_quality2_3",
+      "title": "좋은 품질",
+      "description": "★2 이상 작물을 3번 수확하세요. 물을 주고 제때 수확하면 별이 잘 나와요.",
+      "min_level": 1,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "min_stars": 2, "count": 3 },
+      "reward": { "gold": 90, "exp": 30, "items": { "최하급_황금_비료": 1 } }
+    },
+    {
+      "id": "daily_quality3_2",
+      "title": "품질 검사",
+      "description": "★3 이상 작물을 2번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "min_stars": 3, "count": 2 },
+      "reward": { "gold": 180, "exp": 60, "items": { "하급_황금_비료": 1 } }
+    },
+    {
+      "id": "daily_fruit_quality3_2",
+      "title": "특상품 과일",
+      "description": "★3 이상 과일을 2번 수확하세요.",
+      "min_level": 4,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "과일", "min_stars": 3, "count": 2 },
+      "reward": { "gold": 300, "exp": 100, "items": { "중급_황금_비료": 2 } }
+    }
+  ],
+  "weekly": [
+    {
+      "id": "weekly_plant_15",
+      "title": "이번 주 파종 계획",
+      "description": "아무 씨앗이나 15번 심으세요.",
+      "min_level": 1,
+      "max_level": null,
+      "objective": { "type": "plant", "target": null, "count": 15 },
+      "reward": { "gold": 300, "exp": 120, "items": { "당근_seed": 5 } }
+    },
+    {
+      "id": "weekly_water_15",
+      "title": "한 주의 정성",
+      "description": "작물에 물을 15번 주세요.",
+      "min_level": 1,
+      "max_level": 2,
+      "objective": { "type": "water", "target": null, "count": 15 },
+      "reward": { "gold": 250, "exp": 100, "items": {} }
+    },
+    {
+      "id": "weekly_harvest_20",
+      "title": "주간 수확 목표",
+      "description": "아무 작물이나 20번 수확하세요.",
+      "min_level": 1,
+      "max_level": 2,
+      "objective": { "type": "harvest", "target": null, "count": 20 },
+      "reward": { "gold": 400, "exp": 150, "items": { "토마토_seed": 3 } }
+    },
+    {
+      "id": "weekly_tomato_15",
+      "title": "토마토 대량 납품",
+      "description": "토마토를 15번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "토마토", "count": 15 },
+      "reward": { "gold": 600, "exp": 250, "items": { "오이_seed": 5 } }
+    },
+    {
+      "id": "weekly_cucumber_15",
+      "title": "오이 대량 납품",
+      "description": "오이를 15번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "오이", "count": 15 },
+      "reward": { "gold": 600, "exp": 250, "items": { "토마토_seed": 5 } }
+    },
+    {
+      "id": "weekly_harvest_60",
+      "title": "대풍년",
+      "description": "아무 작물이나 60번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "count": 60 },
+      "reward": { "gold": 1200, "exp": 500, "items": {} }
+    },
+    {
+      "id": "weekly_plant_veg_20",
+      "title": "채소밭 대개간",
+      "description": "채소 씨앗을 20번 심으세요.",
+      "min_level": 1,
+      "max_level": 5,
+      "objective": { "type": "plant", "target": null, "crop_type": "채소", "count": 20 },
+      "reward": { "gold": 350, "exp": 130, "items": { "배추_seed": 5 } }
+    },
+    {
+      "id": "weekly_grain_20",
+      "title": "풍년 곡식",
+      "description": "곡물을 20번 수확하세요.",
+      "min_level": 1,
+      "max_level": 5,
+      "objective": { "type": "harvest", "target": null, "crop_type": "곡물", "count": 20 },
+      "reward": { "gold": 450, "exp": 160, "items": { "옥수수_seed": 5, "하급_비료": 2 } }
+    },
+    {
+      "id": "weekly_root_15",
+      "title": "뿌리 깊은 농부",
+      "description": "뿌리채소를 15번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "뿌리채소", "count": 15 },
+      "reward": { "gold": 500, "exp": 180, "items": { "마늘_seed": 5 } }
+    },
+    {
+      "id": "weekly_plant_fruit_10",
+      "title": "과수원 확장",
+      "description": "과일 씨앗을 10번 심으세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "plant", "target": null, "crop_type": "과일", "count": 10 },
+      "reward": { "gold": 700, "exp": 250, "items": { "중급_비료": 3 } }
+    },
+    {
+      "id": "weekly_fruit_15",
+      "title": "과일 대풍년",
+      "description": "과일을 15번 수확하세요.",
+      "min_level": 3,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "과일", "count": 15 },
+      "reward": { "gold": 1000, "exp": 350, "items": { "복숭아_seed": 3, "귤_seed": 3 } }
+    },
+    {
+      "id": "weekly_flower_10",
+      "title": "꽃 축제 준비",
+      "description": "꽃을 10번 수확하세요.",
+      "min_level": 4,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "crop_type": "꽃", "count": 10 },
+      "reward": { "gold": 900, "exp": 320, "items": { "라벤더_seed": 3 } }
+    },
+    {
+      "id": "weekly_banana_5",
+      "title": "바나나 농장",
+      "description": "바나나를 5번 수확하세요.",
+      "min_level": 5,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "바나나", "count": 5 },
+      "reward": { "gold": 1500, "exp": 500, "items": { "상급_비료": 3 } }
+    },
+    {
+      "id": "weekly_ginseng_3",
+      "title": "심마니의 꿈",
+      "description": "인삼을 3번 수확하세요.",
+      "min_level": 8,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": "인삼", "count": 3 },
+      "reward": { "gold": 4000, "exp": 1200, "items": { "산삼_seed": 1, "최상급_비료": 2 } }
+    },
+    {
+      "id": "weekly_quality2_15",
+      "title": "꾸준한 품질 관리",
+      "description": "★2 이상 작물을 15번 수확하세요.",
+      "min_level": 1,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "min_stars": 2, "count": 15 },
+      "reward": { "gold": 450, "exp": 160, "items": { "하급_황금_비료": 3 } }
+    },
+    {
+      "id": "weekly_quality3_10",
+      "title": "명품 농부",
+      "description": "★3 이상 작물을 10번 수확하세요.",
+      "min_level": 2,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "min_stars": 3, "count": 10 },
+      "reward": { "gold": 800, "exp": 300, "items": { "중급_황금_비료": 3, "중급_비료": 2 } }
+    },
+    {
+      "id": "weekly_quality5_3",
+      "title": "최고 등급 인증",
+      "description": "★5 작물을 3번 수확하세요.",
+      "min_level": 5,
+      "max_level": null,
+      "objective": { "type": "harvest", "target": null, "min_stars": 5, "count": 3 },
+      "reward": { "gold": 2000, "exp": 600, "items": { "상급_황금_비료": 3, "최상급_황금_비료": 1, "최상급_비료": 1 } }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "craft_fert_1",
+    "name": "최하급 비료",
+    "min_level": 1,
+    "gold": 0,
+    "output": { "item": "최하급_비료", "count": 1 },
+    "ingredients": [{ "count": 4 }]
+  },
+  {
+    "id": "craft_fert_2",
+    "name": "하급 비료",
+    "min_level": 2,
+    "gold": 10,
+    "output": { "item": "하급_비료", "count": 1 },
+    "ingredients": [
+      { "crop_type": "채소", "count": 5 },
+      { "crop_type": "곡물", "count": 3 }
+    ]
+  },
+  {
+    "id": "craft_fert_3",
+    "name": "중급 비료",
+    "min_level": 3,
+    "gold": 30,
+    "output": { "item": "중급_비료", "count": 1 },
+    "ingredients": [
+      { "crop_type": "뿌리채소", "count": 6 },
+      { "crop_type": "콩류", "count": 4 }
+    ]
+  },
+  {
+    "id": "craft_fert_4",
+    "name": "상급 비료",
+    "min_level": 5,
+    "gold": 80,
+    "output": { "item": "상급_비료", "count": 1 },
+    "ingredients": [
+      { "crop_type": "과일", "count": 6 },
+      { "crop_type": "과채류", "count": 6 }
+    ]
+  },
+  {
+    "id": "craft_fert_5",
+    "name": "최상급 비료",
+    "min_level": 8,
+    "gold": 200,
+    "output": { "item": "최상급_비료", "count": 1 },
+    "ingredients": [
+      { "crop_type": "과일", "min_stars": 3, "count": 8 },
+      { "crop_type": "꽃", "count": 6 }
+    ]
+  },
+  {
+    "id": "craft_gold_1",
+    "name": "최하급 황금 비료",
+    "min_level": 1,
+    "gold": 10,
+    "output": { "item": "최하급_황금_비료", "count": 1 },
+    "ingredients": [{ "min_stars": 2, "count": 4 }]
+  },
+  {
+    "id": "craft_gold_2",
+    "name": "하급 황금 비료",
+    "min_level": 2,
+    "gold": 30,
+    "output": { "item": "하급_황금_비료", "count": 1 },
+    "ingredients": [{ "min_stars": 3, "count": 5 }]
+  },
+  {
+    "id": "craft_gold_3",
+    "name": "중급 황금 비료",
+    "min_level": 4,
+    "gold": 60,
+    "output": { "item": "중급_황금_비료", "count": 1 },
+    "ingredients": [
+      { "crop_type": "과일", "min_stars": 3, "count": 4 },
+      { "crop_type": "꽃", "min_stars": 3, "count": 3 }
+    ]
+  },
+  {
+    "id": "craft_gold_4",
+    "name": "상급 황금 비료",
+    "min_level": 6,
+    "gold": 150,
+    "output": { "item": "상급_황금_비료", "count": 1 },
+    "ingredients": [{ "min_stars": 4, "count": 8 }]
+  },
+  {
+    "id": "craft_gold_5",
+    "name": "최상급 황금 비료",
+    "min_level": 8,
+    "gold": 400,
+    "output": { "item": "최상급_황금_비료", "count": 1 },
+    "ingredients": [
+      { "min_stars": 5, "count": 6 },
+      { "variant": "mutant", "count": 1 }
+    ]
+  },
+  {
+    "id": "craft_seed_ginseng",
+    "name": "인삼 씨앗",
+    "min_level": 6,
+    "gold": 300,
+    "output": { "item": "인삼_seed", "count": 1 },
+    "ingredients": [{ "crop_type": "뿌리채소", "min_stars": 4, "count": 8 }]
+  },
+  {
+    "id": "craft_seed_golden_apple",
+    "name": "황금사과 씨앗",
+    "min_level": 10,
+    "gold": 2000,
+    "output": { "item": "황금사과_seed", "count": 1 },
+    "ingredients": [
+      { "crop": "사과", "min_stars": 5, "count": 5 },
+      { "variant": "golden", "count": 1 }
+    ]
+  }
+]
